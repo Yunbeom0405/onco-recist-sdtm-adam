@@ -16,7 +16,7 @@ tte <- read_adam("adtte") |>
 fit <- survfit(Surv(AVAL, EVENT) ~ TRT01P, data = tte, conf.type = "log-log")
 
 times <- seq(30, 180, by = 30)
-est <- summary(fit, times = times, extend = TRUE)
+est <- km_at(fit, tte, times)
 med <- quantile(fit, probs = 0.5)
 med_txt <- ifelse(is.na(med$quantile), "NE",
   paste0(f(med$quantile, 1), " (", ifelse(is.na(med$lower), "NE", f(med$lower, 1)), ";",
@@ -24,7 +24,7 @@ med_txt <- ifelse(is.na(med$quantile), "NE",
 
 n <- table(tte$TRT01P)
 events <- tapply(tte$EVENT, tte$TRT01P, sum)
-km <- matrix(f(est$surv, 3), nrow = length(times))
+km <- matrix(ifelse(is.na(est$surv), "NE", f(est$surv, 3)), nrow = length(times))
 
 df <- tibble(
   LABEL = c("N", "Events", "Censored", "Median (95% CI)", paste("Progression-free at Day", times)),

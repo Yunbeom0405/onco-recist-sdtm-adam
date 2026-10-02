@@ -1,0 +1,10 @@
+ROW,LABEL,C1,C2,C3,C4
+1,"Best overall response (unconfirmed), n (%)",,,,
+2,Complete response (CR),6 (7.0%),3 (3.6%),3 (3.6%),12 (4.7%)
+3,Partial response (PR),12 (14.0%),11 (13.1%),15 (17.9%),38 (15.0%)
+4,Stable disease (SD),6 (7.0%),2 (2.4%),4 (4.8%),12 (4.7%)
+5,Progressive disease (PD),51 (59.3%),48 (57.1%),43 (51.2%),142 (55.9%)
+6,Not evaluable (NE),0,1 (1.2%),0,1 (0.4%)
+7,Missing (no assessment),11 (12.8%),19 (22.6%),19 (22.6%),49 (19.3%)
+8,"Objective response (CR or PR), n (%)",18 (20.9%),14 (16.7%),18 (21.4%),50 (19.7%)
+9,95% CI (Clopper-Pearson),12.9; 31.0,9.4; 26.4,13.2; 31.7,15.0; 25.1

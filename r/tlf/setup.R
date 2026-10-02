@@ -52,3 +52,17 @@ save_df <- function(df, name, title, heads, foot = character(), src = name) {
   message(name, ": ", nrow(df), " rows")
   invisible(df)
 }
+
+# Kaplan-Meier at fixed days (data frame TRT01P, AVAL, EVENT). Undefined (NA) after the last
+# observation of an arm when that observation is censored, as in SAS PROC LIFETEST.
+km_at <- function(fit, dat, days) {
+  est <- summary(fit, times = days, extend = TRUE)
+  last <- dat |>
+    group_by(TRT01P) |>
+    summarise(mx = max(AVAL), ev = max(EVENT[AVAL == max(AVAL)]))
+  arm <- rep(seq_along(trt_levels), each = length(days))
+  undefined <- rep(days, times = length(trt_levels)) > last$mx[arm] & last$ev[arm] == 0
+  tibble(arm = arm, surv = ifelse(undefined, NA, est$surv),
+         lower = ifelse(undefined, NA, est$lower), upper = ifelse(undefined, NA, est$upper))
+}
+

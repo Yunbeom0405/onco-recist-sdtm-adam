@@ -1,0 +1,38 @@
+
+===== T_14_1_01 =====
+No issues found
+
+
+===== T_14_2_01 =====
+No issues found
+
+
+===== F_14_3_01_STATS =====
+Differences found between the objects!
+
+Summary of BASE and COMPARE
+  ====================================
+    PROPERTY      BASE        COMP    
+  ------------------------------------
+      Name        sas          r      
+     Class     data.frame  data.frame 
+    Rows(#)        10          10     
+   Columns(#)      5           5      
+  ------------------------------------
+
+
+Not all Values Compared Equal
+  =============================
+   Variable  No of Differences 
+  -----------------------------
+      C1             1         
+  -----------------------------
+
+
+  ==============================
+   VARIABLE  ROW  BASE  COMPARE 
+  ------------------------------
+      C1     10          0.031  
+  ------------------------------
+
+

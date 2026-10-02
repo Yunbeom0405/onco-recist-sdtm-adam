@@ -11,14 +11,15 @@ tte <- read_adam("adtte") |>
 # log-log limits, as SAS PROC LIFETEST
 fit <- survfit(Surv(AVAL, EVENT) ~ TRT01P, data = tte, conf.type = "log-log")
 days <- c(60, 120, 180)
-est <- summary(fit, times = days, extend = TRUE)
+est <- km_at(fit, tte, days)
 med <- quantile(fit, probs = 0.5)
 med_txt <- ifelse(is.na(med$quantile), "NE",
   paste0(f(med$quantile, 1), " (", ifelse(is.na(med$lower), "NE", f(med$lower, 1)), "; ",
          ifelse(is.na(med$upper), "NE", f(med$upper, 1)), ")"))
 rate <- matrix(
-  paste0(f(est$surv, 3), " (", ifelse(is.na(est$lower), "NE", f(est$lower, 3)), "; ",
-         ifelse(is.na(est$upper), "NE", f(est$upper, 3)), ")"),
+  ifelse(is.na(est$surv), "NE",
+    paste0(f(est$surv, 3), " (", ifelse(is.na(est$lower), "NE", f(est$lower, 3)), "; ",
+           ifelse(is.na(est$upper), "NE", f(est$upper, 3)), ")")),
   nrow = length(days))
 
 n <- as.integer(table(tte$TRT01P))

@@ -21,8 +21,8 @@ run;
 
 /* Kaplan-Meier: median and rates at day 60, 120, 180 (log-log limits) */
 ods exclude all;
-ods output Quartiles=q ProductLimitEstimates=pl;
-proc lifetest data=tte timelist=60 120 180 reduceout conftype=loglog;
+ods output Quartiles=q;
+proc lifetest data=tte timelist=60 120 180 reduceout conftype=loglog outsurv=os;
   time aval * cnsr(1);
   strata col;
   format col col.;
@@ -60,12 +60,12 @@ data medl;
 run;
 
 data ratel;
-  set pl;
+  set os;
   length label $200 val $40;
   if missing(timelist) then delete;
-  col = whichc(strip(vvalue(col)), 'Placebo', 'Xanomeline Low Dose', 'Xanomeline High Dose');
   row = 6 + timelist / 60; indent = 0; label = catx(' ', 'PFS rate at Day', timelist, '(95% CI)');
-  val = cat(%f(survival, 3), ' (', coalescec(%f(sdf_lcl, 3), 'NE'), '; ', coalescec(%f(sdf_ucl, 3), 'NE'), ')');
+  if missing(survival) then val = 'NE';
+  else val = cat(%f(survival, 3), ' (', coalescec(%f(sdf_lcl, 3), 'NE'), '; ', coalescec(%f(sdf_ucl, 3), 'NE'), ')');
   keep col row indent label val;
 run;
 
@@ -77,10 +77,11 @@ run;
   run;
 
   ods exclude all;
-  ods output ParameterEstimates=pe HomTests=ht;
+  ods output ParameterEstimates=pe;
   proc phreg data=sub;
     model aval * cnsr(1) = ind / ties=efron risklimits;
   run;
+  ods output HomTests=ht;
   proc lifetest data=sub;
     time aval * cnsr(1);
     strata ind / test=logrank;

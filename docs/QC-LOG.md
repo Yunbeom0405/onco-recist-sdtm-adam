@@ -21,6 +21,17 @@ Trial design datasets (TA, TE, TV, TI, TS) are not part of this project, so only
 
 ADaM spec fixes after the first P21 run (labels, codelists) were made in both programs and the three datasets compared again.
 
+## TLF
+
+| Output | Result |
+|---|---|
+| Table 14-1.01 populations and disposition | Match |
+| Table 14-2.01 best overall response, ORR | Match |
+
+Findings so far:
+- Figure 14-3.01 statistics, PFS rate at day 180 for Placebo: SAS left it missing, R gave 0.031. The last Placebo observation is censored before day 180, so the Kaplan-Meier estimate is undefined there. R `summary(extend = TRUE)` carries the last value forward. R changed to return NE; SAS now prints NE too (Language, R wrong).
+- Table 14-3.01 in SAS: `HomTests` was not created because one `ods output` statement covered two procedures, and the confidence limit variable names were guessed. Fixed by one `ods output` per procedure and `OUTSURV=` for the rates (Bug, SAS, found by SAS log).
+
 ## Data note
 
 4 EX records (01-704-1233, 01-705-1031, 01-705-1303, 01-705-1377) have no EXENDTC and start the day after RFXENDTC, so EPOCH is FOLLOW-UP. This follows the epoch rule; the source dates themselves disagree.

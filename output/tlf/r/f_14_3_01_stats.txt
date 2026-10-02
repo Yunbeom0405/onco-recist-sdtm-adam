@@ -12,7 +12,7 @@ Progression-free at Day 60         0.306                   0.253                
 Progression-free at Day 90         0.235                   0.138                         0.203           
 Progression-free at Day 120        0.219                   0.138                         0.203           
 Progression-free at Day 150        0.202                   0.092                         0.148           
-Progression-free at Day 180        0.031                   0.092                         0.000           
+Progression-free at Day 180          NE                    0.092                         0.000           
 —————————————————————————————————————————————————————————————————————————————————————————————————————————
 
 Population: Intent-to-Treat. Kaplan-Meier estimates, 95% CI with log-log transformation.

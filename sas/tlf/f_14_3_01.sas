@@ -59,7 +59,7 @@ data stats;
     output;
   end;
   else do;
-    ord = 4 + timelist / 30; label = catx(' ', 'Progression-free at Day', timelist); val = %f(survival, 3);
+    ord = 4 + timelist / 30; label = catx(' ', 'Progression-free at Day', timelist); val = coalescec(%f(survival, 3), 'NE');
     output;
   end;
   keep column ord label val;
