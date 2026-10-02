@@ -1,6 +1,6 @@
 # Oncology Response Data — SDTM Upgrade and ADaM
 
-Dual-programmed (SAS production, R independent QC) upgrade of public oncology SDTM test data to SDTMIG 3.4, then ADaM, with Define-XML 2.1 and Pinnacle 21 validation. ADaM (ADSL, ADRS, ADTTE) follows, then TLFs.
+Dual-programmed (SAS production, R independent QC) upgrade of public oncology SDTM test data to SDTMIG 3.4, then ADaM, with Define-XML 2.1 and Pinnacle 21 validation. ADaM (ADSL, ADRS, ADTTE) follows, with four TLFs.
 
 ## Data
 
@@ -29,21 +29,37 @@ Changes to the source include: study day recalculated, EPOCH and `--LOBXFL` adde
 |---|---|---|
 | SDTM | 7 domains (DM, DS, EX, SV, TU, TR, RS) | SAS = R |
 | ADaM | 3 datasets (ADSL, ADRS, ADTTE) | SAS = R |
+| TLF | 3 tables, 1 figure (cell by cell) | SAS = R |
 | Pinnacle 21 SDTM | with define.xml | 0 errors, 951 warnings, 1 reject (no TS) |
 | Pinnacle 21 ADaM | with define.xml | 0 errors, 0 warnings |
 
 - Warnings and decisions: [docs/P21-REVIEW.md](docs/P21-REVIEW.md)
 - QC findings: [docs/QC-LOG.md](docs/QC-LOG.md)
-- Reports: [output/validation/](output/validation/)
+- Reports: [output/validation/](output/validation/). TLF output: [output/tlf/](output/tlf/)
 - define.xml: [define/sdtm/](define/sdtm/), [define/adam/](define/adam/)
+
+## TLF
+
+| Table | Content |
+|---|---|
+| 14-1.01 | Populations and study disposition |
+| 14-2.01 | Best overall response (unconfirmed) and objective response rate |
+| 14-3.01 | Progression-free survival: events, median, rates, hazard ratio, log-rank |
+| Figure 14-3.01 | Kaplan-Meier, PFS by arm |
+
+Objective response is 19.7% overall (Placebo 20.9%, Low 16.7%, High 21.4%). PFS median is 44, 44 and 47 days; hazard ratios are 1.11 and 0.97 against placebo (log-rank p 0.52 and 0.97). The tumor data are synthetic, so there is no treatment effect to find and these numbers say nothing about the drug.
+
+<img src="output/tlf/r/f_14_3_01.png" width="650">
+
+Figure from the R program; the SAS version is in `output/tlf/sas/`.
 
 ## Structure
 
 ```
 data/source/   XPT exported from pharmaversesdtm (not committed)
 data/derived/  SDTM and ADaM datasets from the SAS programs
-sas/           production programs
-r/             independent QC programs
+sas/           production programs: sdtm/, adam/, tlf/
+r/             independent QC programs: sdtm/, adam/, tlf/
 python/        define.xml builder
 define/        Define-XML 2.1
 docs/          gap analysis, QC log, P21 review
