@@ -114,6 +114,8 @@ run;
 
 data long;
   set cntl medl ratel cmp2 cmp3 blank;
+  /* the format of COL from PROC LIFETEST would name the transposed columns */
+  format col;
 run;
 
 proc sort data=long;

@@ -32,7 +32,7 @@ Not all Values Compared Equal
   ==============================
    VARIABLE  ROW  BASE  COMPARE 
   ------------------------------
-      C1     10          0.031  
+      C1     10           NE    
   ------------------------------
 
 
