@@ -11,10 +11,15 @@ SAS is the production program, R the independent QC program written from the spe
 | TU | Match | none |
 | TR | Match | none |
 | RS | Match | none |
+| ADSL | Match | none |
+| ADRS | Match | none |
+| ADTTE | Match | none (SAS hand-coded, R `derive_param_tte()`) |
 
 While writing R for TU/TR/RS, `as.Date()` failed on partial dates (`2014-01`); fixed with an explicit format and all domains re-compared (Language, R wrong).
 
 Trial design datasets (TA, TE, TV, TI, TS) are not part of this project, so only the 7 domains above are compared. SVPRESP no longer uses TV; same result.
+
+ADaM spec fixes after the first P21 run (labels, codelists) were made in both programs and the three datasets compared again.
 
 ## Data note
 

@@ -99,10 +99,10 @@ proc sql;
 quit;
 
 data borrec;
-  length paramcd srcdom srcvar $8 param $40 avalc $20 anl01fl $1;
   merge itt(in=_a) bor1(in=_b);
   by usubjid;
   if _a;
+  length paramcd srcdom srcvar $8 param $40 avalc $20 anl01fl $1;
   paramcd = 'BOR';
   param = 'Best Overall Response';
   paramn = 3;
@@ -141,7 +141,7 @@ data adrs1;
     trt01a   = 'Actual Treatment for Period 01'
     trt01an  = 'Actual Treatment for Period 01 (N)'
     trtsdt   = 'Date of First Exposure to Treatment'
-    ittfl    = 'Intent-to-Treat Population Flag'
+    ittfl    = 'Intent-To-Treat Population Flag'
     paramcd  = 'Parameter Code'
     param    = 'Parameter'
     paramn   = 'Parameter (N)'

@@ -90,7 +90,7 @@ data adsl1;
     randdt   = 'Date of Randomization'
     trtsdt   = 'Date of First Exposure to Treatment'
     trtedt   = 'Date of Last Exposure to Treatment'
-    ittfl    = 'Intent-to-Treat Population Flag'
+    ittfl    = 'Intent-To-Treat Population Flag'
     saffl    = 'Safety Population Flag'
     dthfl    = 'Subject Death Flag'
     dthdt    = 'Date of Death'

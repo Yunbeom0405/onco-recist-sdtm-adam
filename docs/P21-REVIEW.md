@@ -29,3 +29,10 @@ TU, TR, RS and SV have no findings.
 ## Trial design
 
 TA, TE, TV, TI and TS are not part of this project. The synthetic tumor data have no protocol of their own, and the only trial design source in {pharmaversesdtm} (TS) describes the original Alzheimer's study. The TS reject and the TA and TE warnings stay open on purpose.
+
+## ADaM
+
+P21 Community, engine FDA 2508.1, ADaM-IG 1.3, with `define/adam/define.xml` and the SDTM datasets (needed for the traceability rules). ADSL, ADRS, ADTTE: 0 errors, 0 warnings. Report: `output/validation/p21/p21-adam-define.xlsx`. The 5 remaining warnings (AD9999) only say that the SDTM datasets are not checked by ADaM rules.
+
+The first run had 1,931 warnings, all from the spec: a codelist on PARAM, no `N` in the No Yes codelist, and two labels that differ from the standard (ITTFL, STARTDT). Fixed in the spec and in both programs.
+
