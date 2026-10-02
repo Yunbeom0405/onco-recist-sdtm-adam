@@ -1,0 +1,12 @@
+data/source/
+*.log
+*.lst
+*.bak
+.Rproj.user/
+.RData
+.DS_Store
+Thumbs.db
+specs/*.xlsx
+data/derived/sdtm-r/*.xpt
+__pycache__/
+*.sas7bdat
