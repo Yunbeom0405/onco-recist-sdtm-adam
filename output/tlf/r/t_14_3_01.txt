@@ -1,0 +1,21 @@
+Table 14-3.01 Progression-Free Survival
+
+——————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+                                      Placebo (N=86)      Xanomeline Low Dose (N=84)   Xanomeline High Dose (N=84)
+——————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+Subjects, n                                 86                        84                           84             
+Events, n (%)                           67 (77.9%)                55 (65.5%)                   53 (63.1%)         
+Progressive disease                     65 (75.6%)                55 (65.5%)                   53 (63.1%)         
+Death                                    2 (2.3%)                     0                             0             
+Censored, n (%)                         19 (22.1%)                29 (34.5%)                   31 (36.9%)         
+Median (95% CI), days               44.0 (43.0; 47.0)         44.0 (43.0; 46.0)             47.0 (44.0; 57.0)     
+PFS rate at Day 60 (95% CI)        0.306 (0.205; 0.412)      0.253 (0.152; 0.367)         0.347 (0.231; 0.465)    
+PFS rate at Day 120 (95% CI)       0.219 (0.132; 0.320)      0.138 (0.063; 0.242)         0.203 (0.108; 0.319)    
+PFS rate at Day 180 (95% CI)       0.031 (0.003; 0.120)      0.092 (0.032; 0.190)            0.000 (NE; NE)       
+Hazard ratio vs Placebo (95% CI)                             1.110 (0.772; 1.596)         0.968 (0.672; 1.394)    
+Log-rank p-value vs Placebo                                         0.521                         0.974           
+——————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+Population: Intent-to-Treat. Event: first progressive disease or death. Censored at last tumor assessment or at randomization.
+Kaplan-Meier, 95% CI log-log. Hazard ratio: Cox model, Efron ties. NE: not estimable.
+Source: r/tlf/t_14_3_01.R

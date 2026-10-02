@@ -1,0 +1,13 @@
+ROW,LABEL,C1,C2,C3,C4
+1,Randomized (ITT),86 (100%),84 (100%),84 (100%),254 (100%)
+2,Safety,86 (100%),84 (100%),84 (100%),254 (100%)
+3,Completed study,58 (67%),25 (30%),27 (32%),110 (43%)
+4,Discontinued study,28 (33%),59 (70%),57 (68%),144 (57%)
+5,Adverse event,8 (9%),44 (52%),40 (48%),92 (36%)
+6,Death,2 (2%),1 (1%),0,3 (1%)
+7,Lack of efficacy,3 (3%),0,1 (1%),4 (2%)
+8,Lost to follow-up,1 (1%),1 (1%),0,2 (1%)
+9,Physician decision,1 (1%),0,2 (2%),3 (1%)
+10,Protocol violation,2 (2%),1 (1%),3 (4%),6 (2%)
+11,Study terminated by sponsor,2 (2%),2 (2%),3 (4%),7 (3%)
+12,Withdrawal by subject,9 (10%),10 (12%),8 (10%),27 (11%)
