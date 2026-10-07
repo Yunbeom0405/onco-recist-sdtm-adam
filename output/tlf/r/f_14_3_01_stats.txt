@@ -1,0 +1,20 @@
+Figure 14-3.01 Statistics: Progression-Free Survival
+
+—————————————————————————————————————————————————————————————————————————————————————————————————————————
+                               Placebo (N=86)    Xanomeline Low Dose (N=84)   Xanomeline High Dose (N=84)
+—————————————————————————————————————————————————————————————————————————————————————————————————————————
+N                                    86                      84                           84             
+Events                               67                      55                           53             
+Censored                             19                      29                           31             
+Median (95% CI)               44.0 (43.0;47.0)        44.0 (43.0;46.0)             47.0 (44.0;57.0)      
+Progression-free at Day 30         0.987                   1.000                         1.000           
+Progression-free at Day 60         0.306                   0.253                         0.347           
+Progression-free at Day 90         0.235                   0.138                         0.203           
+Progression-free at Day 120        0.219                   0.138                         0.203           
+Progression-free at Day 150        0.202                   0.092                         0.148           
+Progression-free at Day 180          NE                    0.092                         0.000           
+—————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+Population: Intent-to-Treat. Kaplan-Meier estimates, 95% CI with log-log transformation.
+NE: not estimable.
+Source: r/tlf/f_14_3_01.R

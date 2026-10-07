@@ -1,0 +1,14 @@
+*.bak
+*.log
+*.lst
+*.sas7bdat
+.DS_Store
+.RData
+.Rproj.user/
+Thumbs.db
+__pycache__/
+data/derived/adam-r/*.xpt
+data/derived/sdtm-r/*.xpt
+data/source/
+specs/*.xlsx
+specs/adam-spec.xlsx

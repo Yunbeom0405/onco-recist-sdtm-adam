@@ -1,0 +1,19 @@
+Table 14-2.01 Best Overall Response and Objective Response Rate
+
+——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+                                             Placebo (N=86)   Xanomeline Low Dose (N=84)   Xanomeline High Dose (N=84)   Total (N=254)
+——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+Best overall response (unconfirmed), n (%)                                                                                            
+Complete response (CR)                          6 (7.0%)               3 (3.6%)                     3 (3.6%)               12 (4.7%)  
+Partial response (PR)                          12 (14.0%)             11 (13.1%)                   15 (17.9%)             38 (15.0%)  
+Stable disease (SD)                             6 (7.0%)               2 (2.4%)                     4 (4.8%)               12 (4.7%)  
+Progressive disease (PD)                       51 (59.3%)             48 (57.1%)                   43 (51.2%)             142 (55.9%) 
+Not evaluable (NE)                                 0                   1 (1.2%)                         0                  1 (0.4%)   
+Missing (no assessment)                        11 (12.8%)             19 (22.6%)                   19 (22.6%)             49 (19.3%)  
+Objective response (CR or PR), n (%)           18 (20.9%)             14 (16.7%)                   18 (21.4%)             50 (19.7%)  
+95% CI (Clopper-Pearson)                       12.9; 31.0             9.4; 26.4                    13.2; 31.7             15.0; 25.1  
+——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+Population: Intent-to-Treat. RECIST 1.1 by Radiologist 1. Responses are unconfirmed; assessments after the first PD are not used.
+SD requires study day 42 or later; earlier SD counts as NE. Missing: no tumor assessment.
+Source: r/tlf/t_14_2_01.R
